@@ -104,6 +104,11 @@ body {
 	border:none;
 }
 
+.butt {
+	color: black;
+	border-color: #C29EFD;
+}
+
 .footer {
 	background-color: aqua;
 	height: 100px;
