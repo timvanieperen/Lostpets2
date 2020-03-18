@@ -35,6 +35,10 @@ input {
 	font-family: montserrat;
 }
 
+button {
+	font-family: montserrat;
+}
+
 body {
 	max-width: 480px;
 	margin-top: 59px;
