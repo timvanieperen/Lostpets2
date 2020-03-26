@@ -10,7 +10,7 @@
 <body>
 <div class="pos-f-t">
   <nav class="navbar fixed-top navbar-dark w-100 justify-content-between ">
-	<a href="Profile.html"><button class="btn" type="button">Back</button></a>
+	<a href="Profile.html"><button class="btn" type="button"><img src="../icons/Icon_Arrow.png" class="img-fluid icons"></button></a>
     <button class="btn" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <img alt="settings" src="../icons/Icon_Settings.png" class="img-fluid icons">
     </button>
@@ -26,10 +26,12 @@
 
 	
 	<form class="container-fluid">
- <div class="form-group">
-    <label for="exampleFormControlFile1">Picture</label>
-    <input type="file" class="form-control-file butt" id="exampleFormControlFile1">
-  </div>
+    <p for="exampleFormControlFile1">Picture</p>
+    
+	<div class="upload-btn-wrapper">
+  <button class="butn">upload picture</button>
+  <input type="file" name="myfile" />
+</div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Name</label>
     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name">
