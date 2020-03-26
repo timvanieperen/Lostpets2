@@ -39,6 +39,10 @@ button {
 	font-family: montserrat;
 }
 
+li {
+	font-family: montserrat;
+}
+
 body {
 	max-width: 480px;
 	margin-top: 59px;
