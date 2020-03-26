@@ -39,10 +39,18 @@ button {
 	font-family: montserrat;
 }
 
+li {
+	font-family: montserrat;
+}
+
 body {
 	max-width: 480px;
 	margin-top: 59px;
+	background-image:url("../img/Background1_NoBG.png");
+	background-size: 480px auto;
 }
+
+
 .cd-faq__items {
   position: fixed;
   height: 100%;
