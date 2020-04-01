@@ -11,7 +11,7 @@
 	
 <div class="pos-f-t">
   <nav class="navbar fixed-top navbar-dark w-100 justify-content-between ">
-	<img src="../img/Logofindmypet.png" width="200" height="38" alt=""/>
+	<a href="../index.html"><button class="btn" type="button"><img src="../icons/Icon_Arrow.png" class="img-fluid icons"></button></a>
 	<button class="btn" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <img alt="settings" src="../icons/Icon_Settings.png" class="img-fluid icons">
     </button>
@@ -26,9 +26,7 @@
   </div>	
 </div>
 
-	<br>
-	<br>
-	<br>
+
 <form class="needs-validation" novalidate>
   <div class="form-Group">
     <div class="container">
@@ -37,7 +35,14 @@
       <div class="valid-feedback">
         Looks good!
       </div>
-    </div>
+    </div><br>
+	  <div class="form-group container">
+    <label for="validationDefault02">What kind?</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Dog</option>
+      <option>Cat</option>
+    </select>
+  </div>
     <div class="container">
       <label for="validationCustom02">Breed</label>
       <input type="text" class="form-control" id="validationCustom02" placeholder="Breed" required>
@@ -46,29 +51,23 @@
       </div>
     </div>
     
-  </div>
+  </div><br>
   <div class="form-group">
     <div class="container">
-      <label for="validationCustom03">City</label>
-      <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+      <label for="validationCustom03">Color</label>
+      <input type="text" class="form-control" id="validationCustom03" placeholder="Color" required>
       <div class="invalid-feedback">
-        Please provide a valid city.
+        Please provide a valid color.
       </div>
-    </div>
+    </div> <br>
     <div class="container">
-      <label for="validationCustom04">State</label>
-      <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+      <label for="validationCustom04">Where</label>
+      <input type="text" class="form-control" id="validationCustom04" placeholder="Location" required>
       <div class="invalid-feedback">
-        Please provide a valid state.
+        Please provide a valid location.
       </div>
     </div>
-    <div class="container">
-      <label for="validationCustom05">Zip</label>
-      <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
-      <div class="invalid-feedback">
-        Please provide a valid zip.
-      </div>
-    </div>
+    
   </div>
  
 	<div class="container">
@@ -91,7 +90,18 @@
     </div>
 	</div>
      </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
+ <div class="custom-control custom-switch container">
+  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+  <label class="custom-control-label" for="customSwitch1">Want to recieve notifications?</label>
+</div>
+<div class="buttons">
+<div class="button">
+<a type="button" href="Ilostapet2.html"  class="btn btn-primary btn-lg rounded but" role="button">Submit</a>
+	</div>
+	</div>
+	<br>
+	<br>
+	<br>
 </form>
 
 <script>
