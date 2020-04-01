@@ -43,6 +43,7 @@
   <div class="form-group">
     <label for="validationDefault01">Name</label>
     <input type="text" class="form-control" id="validationDefault01" placeholder="Name of pet" required>
+	  
   </div>
   <div class="form-group">
     <label for="validationDefault02">What kind?</label>
@@ -52,16 +53,19 @@
     </select>
   </div>
    <div class="form-group">
-    <label for="validationDefault03">Breed</label>
-    <input type="email" class="form-control" id="validationDefault03" placeholder="e.g. Golden Retriever" required>
+    <label for="validationCustom03">Breed</label>
+    <input type="text" class="form-control" id="validationCustom03" placeholder="e.g. Golden Retriever" required>
+	 <div class="invalid-feedback">
+        Please provide a valid breed.
+      </div>  
   </div>
   <div class="form-group">
     <label for="validationDefault04">Color</label>
-    <input type="email" class="form-control" id="validationDefault04" placeholder="e.g. Black" required>
+    <input type="text" class="form-control" id="validationDefault04" placeholder="e.g. Black" required>
   </div>
 	 <div class="form-group">
     <label for="validationDefault05">Where</label>
-    <input type="email" class="form-control" id="validationDefault05" placeholder="Where did you lose your pet?" required>
+    <input type="text" class="form-control" id="validationDefault05" placeholder="Where did you lose your pet?" required>
   </div>
 	<div>
 		<div class="form-group">
@@ -79,16 +83,39 @@
             });
 			$("#datetimepicker").data("DateTimePicker").FUNCTION()
         </script>
+	
     </div>
 	</div>
      </div>
+	
     </form>
    </div>
   </div>
  </div>
 </div>
 	</div>
+
 </form>
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
 	  
 	  <div class="custom-control custom-switch">
   <input type="checkbox" class="custom-control-input" id="customSwitch1">
