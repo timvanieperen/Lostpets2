@@ -237,3 +237,35 @@ input:checked + .slider:before {
   top: 0;
   opacity: 0;
 }
+
+.list-item{
+	background-color: aliceblue;
+	border: 2px solid #C29EFD;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	padding:10px;
+}
+
+.list-item img{
+	border: 2px solid #C29EFD;
+}
+
+.list-item hr{
+	border-top:2px solid #C29EFD;
+
+}
+
+.button-item{
+	width: 49%;
+	color:black;
+	background: #C29EFD;
+	border: none;
+	border-radius: 5px;
+	height: 40px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.item-text{
+	display: inline;
+	width: 48%;
+}

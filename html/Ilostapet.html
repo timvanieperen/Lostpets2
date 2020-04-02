@@ -6,6 +6,15 @@
 	<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="../css/style.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<script>
+function validateForm() {
+  var x = document.forms["myForm"]["name"]["color"]["where"]["when"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
 </head>
 
 <body>
@@ -31,7 +40,7 @@
 
 
 
-<form class="container-fluid needs-validation" novalidate>
+<form class="container-fluid needs-validation" name="myForm" onsubmit="return validateForm()" method="post">
 	  
     <p for="exampleFormControlFile1">Picture</p>
     
@@ -42,7 +51,7 @@
 
   <div class="form-group">
     <label for="validationDefault01">Name</label>
-    <input type="text" class="form-control" id="validationDefault01" placeholder="Name of pet" required>
+    <input type="text" class="form-control" id="validationDefault01" placeholder="Name of pet" name="name" required>
 	  
   </div>
   <div class="form-group">
@@ -54,68 +63,34 @@
   </div>
    <div class="form-group">
     <label for="validationCustom03">Breed</label>
-    <input type="text" class="form-control" id="validationCustom03" placeholder="e.g. Golden Retriever" required>
+    <input name="breed" type="text" class="form-control" id="validationCustom03" placeholder="e.g. Golden Retriever" required>
 	 <div class="invalid-feedback">
         Please provide a valid breed.
       </div>  
   </div>
   <div class="form-group">
     <label for="validationDefault04">Color</label>
-    <input type="text" class="form-control" id="validationDefault04" placeholder="e.g. Black" required>
+    <input name="color" type="text" class="form-control" id="validationDefault04" placeholder="e.g. Black" required>
   </div>
 	 <div class="form-group">
     <label for="validationDefault05">Where</label>
-    <input type="text" class="form-control" id="validationDefault05" placeholder="Where did you lose your pet?" required>
+    <input name="where" type="text" class="form-control" id="validationDefault05" placeholder="Where did you lose your pet?" required>
   </div>
 	<div>
 		<div class="form-group">
-	<label for="exampleFormControlInput1">When</label>
-<div>
+	<label name="when" for="exampleFormControlInput1">When</label>
+
        <div class="form-group">
  <label ></label>
  <input type="date" name="bday" max="3000-12-31" 
         min="1000-01-01" class="form-control" required>
 </div>
-
-        <script type="text/javascript">
-            $(function () {
-                $("#datetimepicker1").datetimepicker();
-            });
-			$("#datetimepicker").data("DateTimePicker").FUNCTION()
-        </script>
-	
-    </div>
-	</div>
+		</div>
      </div>
 	
-    </form>
-   </div>
-  </div>
- </div>
-</div>
-	</div>
 
-</form>
-<script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
-</script>
+
+
 	  
 	  <div class="custom-control custom-switch">
   <input type="checkbox" class="custom-control-input" id="customSwitch1">
@@ -123,9 +98,10 @@
 </div>
 <div class="buttons">
 <div class="button">
-<a type="button" href="Ilostapet2.html"  class="btn btn-primary btn-lg rounded but" role="button">Submit</a>
+<input type="submit" value="submit" href="Ilostapet2.html"  class="btn btn-primary btn-lg rounded but" role="button">
 	</div>
 	</div>
+    </form>
 <br>
 	<br>
 	<br>
