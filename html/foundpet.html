@@ -6,6 +6,15 @@
 	<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="../css/style.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		<script>
+function validateForm() {
+  var x = document.forms["myForm"]["name"]["color"]["where"]["when"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
 </head>
 <body>
 <div class="pos-f-t">
@@ -29,56 +38,68 @@
 	<br>
 	<br>
 
-<form class="container-fluid">
+<form class="container-fluid needs-validation" name="myForm" onsubmit="return validateForm()" method="post">
+	  
     <p for="exampleFormControlFile1">Picture</p>
     
 	<div class="upload-btn-wrapper">
   <button class="butn">upload picture</button>
   <input type="file" name="myfile" />
 </div>
+
   <div class="form-group">
-    <label for="validationDefault01">What kind?</label>
+    <label for="validationDefault01">Name</label>
+    <input type="text" class="form-control" id="validationDefault01" placeholder="Name of pet (if not on collar, type: 'Unknown')" name="name" required>
+	  
+  </div>
+  <div class="form-group">
+    <label for="validationDefault02">What kind?</label>
     <select class="form-control" id="exampleFormControlSelect1">
       <option>Dog</option>
       <option>Cat</option>
     </select>
   </div>
    <div class="form-group">
-    <label for="validationDefault02">Breed</label>
-    <input type="text" class="form-control" id="validationDefault02" placeholder="e.g. Golden Retriever" required>
+    <label for="validationCustom03">Breed</label>
+    <input name="breed" type="text" class="form-control" id="validationCustom03" placeholder="e.g. Golden Retriever" required>
+	 <div class="invalid-feedback">
+        Please provide a valid breed.
+      </div>  
   </div>
   <div class="form-group">
-    <label for="validationDefault03">Color</label>
-    <input type="text" class="form-control" id="validationDefault03" placeholder="e.g. Black" required>
+    <label for="validationDefault04">Color</label>
+    <input name="color" type="text" class="form-control" id="validationDefault04" placeholder="e.g. Black" required>
   </div>
 	 <div class="form-group">
-    <label for="validationDefault04">Where</label>
-    <input type="text" class="form-control" id="validationDefault04" placeholder="Where did you find the pet?" required>
+    <label for="validationDefault05">Where</label>
+    <input name="where" type="text" class="form-control" id="validationDefault05" placeholder="Where did you lose your pet?" required>
   </div>
-	<div class="form-group">
-	<label for="exampleFormControlInput1">When</label>
-<div>
+	<div>
+		<div class="form-group">
+	<label name="when" for="exampleFormControlInput1">When</label>
+
        <div class="form-group">
  <label ></label>
  <input type="date" name="bday" max="3000-12-31" 
         min="1000-01-01" class="form-control" required>
 </div>
+		</div>
+     </div>
+	
 
-        <script type="text/javascript">
-            $(function () {
-                $("#datetimepicker1").datetimepicker();
-            });
-			$("#datetimepicker").data("DateTimePicker").FUNCTION()
-        </script>
-    </div>
-	</div>
-</form>
 
+
+	  
+	  <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+  <label class="custom-control-label" for="customSwitch1">Want to recieve notifications?</label>
+</div>
 <div class="buttons">
 <div class="button">
-<a type="button" href="foundpetcheck.html"  class="btn btn-primary btn-lg rounded but" role="button">Continue</a>
+<input type="submit" value="Submit" href="foundpetcheck.html"   class="primay-color btn btn-primary btn-lg rounded but" >
 	</div>
 	</div>
+    </form>
 
 	  
 	  
