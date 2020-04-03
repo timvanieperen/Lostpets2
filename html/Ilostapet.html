@@ -6,21 +6,12 @@
 	<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="../css/style.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-	<script>
-function validateForm() {
-  var x = document.forms["myForm"]["name"]["color"]["where"]["when"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-}
-</script>
 </head>
 
 <body>
 <div class="pos-f-t">
   <nav class="navbar fixed-top navbar-dark w-100 justify-content-between ">
-	<a href="../index.html"><button class="btn" type="button"><img src="../icons/Icon_Arrow.png" class="img-fluid icons"></button></a>
+	<a href="../index.html"><button class="btn" type="button"><img src="../icons/Icon_Arrow.png" alt="terug" class="img-fluid icons"></button></a>
     <button class="btn" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <img alt="settings" src="../icons/Icon_Options_Black.png" class="img-fluid icons">
     </button>
@@ -40,7 +31,7 @@ function validateForm() {
 
 
 
-<form class="container-fluid needs-validation" name="myForm" onsubmit="return validateForm()" method="post">
+<form class="container-fluid " name="myForm" onsubmit="window.location.href='ilostapet2.html'">
 	  
     <p for="exampleFormControlFile1">Picture</p>
     
@@ -51,39 +42,39 @@ function validateForm() {
 
   <div class="form-group">
     <label for="validationDefault01">Name</label>
-    <input type="text" class="form-control" id="validationDefault01" placeholder="Name of pet" name="name" required>
+    <input type="text" class="form-control"  placeholder="Name of pet" name="name" >
 	  
   </div>
   <div class="form-group">
     <label for="validationDefault02">What kind?</label>
-    <select class="form-control" id="exampleFormControlSelect1">
+    <select class="form-control" >
       <option>Dog</option>
       <option>Cat</option>
     </select>
   </div>
    <div class="form-group">
     <label for="validationCustom03">Breed</label>
-    <input name="breed" type="text" class="form-control" id="validationCustom03" placeholder="e.g. Golden Retriever" required>
+    <input name="breed" type="text" class="form-control" placeholder="e.g. Golden Retriever" required>
 	 <div class="invalid-feedback">
         Please provide a valid breed.
       </div>  
   </div>
   <div class="form-group">
     <label for="validationDefault04">Color</label>
-    <input name="color" type="text" class="form-control" id="validationDefault04" placeholder="e.g. Black" required>
+    <input name="color" type="text" class="form-control"  placeholder="e.g. Black" >
   </div>
 	 <div class="form-group">
     <label for="validationDefault05">Where</label>
-    <input name="where" type="text" class="form-control" id="validationDefault05" placeholder="Where did you lose your pet?" required>
+    <input name="where" type="text" class="form-control"  placeholder="Where did you lose your pet?" >
   </div>
 	<div>
 		<div class="form-group">
-	<label name="when" for="exampleFormControlInput1">When</label>
+	<label name="when" >When</label>
 
        <div class="form-group">
  <label ></label>
  <input type="date" name="bday" max="3000-12-31" 
-        min="1000-01-01" class="form-control" required>
+        min="1000-01-01" class="form-control" >
 </div>
 		</div>
      </div>
@@ -98,16 +89,14 @@ function validateForm() {
 </div>
 <div class="buttons">
 <div class="button">
-<input type="submit" value="Submit" href="Ilostapet2.html"  class="primay-color btn btn-primary btn-lg rounded but" role="button">
+<input  value="submit" type="submit" class="primay-color btn btn-primary btn-lg rounded but"  >
 	</div>
 	</div>
     </form>
 <br>
 	<br>
 	<br>
-	<br>  
-	
-	
+	<br>
 <nav class="nav nav-fill fixed-bottom">
   <a class="nav-item nav-link btn btn-dark primary-color" href="Foundpetsoverview.html"><img alt="list" class="img-fluid icons" src="../icons/Icon_List.png"></a>
   <a class="nav-item nav-link btn btn-dark secondary-color" href="MapsOverview.html"><img src="../icons/Icon_Map.png" class="img-fluid icons" alt="map"> </a>
